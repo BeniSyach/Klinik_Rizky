@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_jadwal"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:title="Pendaftaran" />
+        <item
+            android:id="@+id/nav_poli"
+            android:icon="@drawable/ic_local_hospital_black_24dp"
+            android:title="Poliklinik" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="Informasi" />
+        <item
+            android:id="@+id/nav_data_pasien"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="Pasien" />
+        <item
+            android:id="@+id/nav_panggil"
+            android:icon="@drawable/ic_queue_play_next_white_24dp"
+            android:title="Panggil Nomor" />
+
+    </group>
+
+    <item android:title="Manage">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+
+</menu>

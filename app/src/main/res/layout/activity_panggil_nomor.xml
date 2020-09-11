@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/gradientbackground"
+    android:gravity="center|bottom"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".panggil_nomor">
+
+    <com.rackspira.kal.lib.CustomTextView
+        android:id="@+id/judul_panggilan"
+        app:fontPath="fonts/TypoGraphica_demo.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:textSize="40dp"
+        android:text="Klinik Rizky"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_nomor"
+        android:layout_below="@+id/judul_panggilan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="100dp" >
+
+        <androidx.cardview.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/kartu_nomor"
+            android:layout_width="210dp"
+            android:layout_height="240dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/mregular"
+                    android:text="NOMOR ANTRIAN KE"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgray"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/nomor_antrian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="150dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_nomor3"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_nomor"
+        android:gravity="center"
+        android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginRight="50dp">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/backgroundlingkaranhijau"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_play_arrow_white_24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/mregular"
+                    android:layout_marginTop="20dp"
+                    android:text="Play"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/backgroundlingkarankuning"
+                    android:src="@drawable/ic_skip_next_white_24dp"
+                    android:padding="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/mregular"
+                    android:text="Selanjutnya"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_kembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:id="@+id/btnbalek"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/backgroundlingkaranpink"
+                android:padding="10dp"
+                android:src="@drawable/ic_exit_to_app_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/mregular"
+                android:layout_marginTop="20dp"
+                android:text="Kembali"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

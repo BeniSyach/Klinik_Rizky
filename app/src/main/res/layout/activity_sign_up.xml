@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relativeLayout"
+    android:layout_height="match_parent"
+    android:background="@drawable/animation_list"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.rackspira.kal.lib.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:fontPath="fonts/TypoGraphica_demo.otf"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <RadioGroup
+            android:id="@+id/rdg_kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/rdb_bpjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text="BPJS"
+                android:textSize="20dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/rdb_umum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:textSize="20dp"
+                android:text="UMUM"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/no_bpjs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:hint="Nomor BPJS"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/no_ktp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:hint="NIK"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/nama_pasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:hint="Nama (Sesuai KTP)"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/tgl_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:hint="Tanggal Lahir (DD MM YYYY)"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/alamat_pasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Alamat Sesuai KTP"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/tlp_pasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Nomor Telepon"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/email_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:hint="Email"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Password"
+            android:padding="10dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Konfirmasi Password"
+            android:padding="10dp"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/tombol_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_rounded_facebook"
+            android:text="Daftar"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"/>
+
+        <TextView
+            android:id="@+id/tv_sudah_punya_akun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"
+            android:text="Sudah Punya Akun? Masuk Disini"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground"
+    tools:context=".nomor_antrian">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="60dp">
+
+        <com.rackspira.kal.lib.CustomTextView
+            app:fontPath="fonts/TypoGraphica_demo.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Klinik Rizky"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/tv_ruangperiksa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Ruang Periksa Disini"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_nomorAntrian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textSize="80dp"/>
+
+        <TextView
+            android:id="@+id/tv_noKtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIK Disini"
+            android:fontFamily="@font/mregular"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_namaPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Nama Pasien Disini"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Hadir Pada : "
+            android:fontFamily="@font/mregular"
+            android:textAlignment="center"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:id="@+id/tv_waktu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="Waktu Periksa Disini"
+            android:fontFamily="@font/mregular"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btnkembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_rounded_facebook"
+            android:text="Kembali"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</RelativeLayout>

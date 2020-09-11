@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeTambahDataPasien"
+    android:background="@drawable/gradientbackground"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rdg_kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/rdb_bpjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BPJS"
+                android:fontFamily="@font/mregular"
+                android:textSize="20dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/rdb_umum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMUM"
+                android:fontFamily="@font/mregular"
+                android:textSize="20dp"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/bpjs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text="Nomor BPJS"/>
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:text=":"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mregular"
+                android:id="@+id/edt_bpjsPas"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nik_layout"
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="NIK"/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:id="@+id/edt_nikPas"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Nama "/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_namaPas"
+            android:fontFamily="@font/mregular"
+            android:hint="Nama Lengkap Sesuai KTP"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Tanggal Lahir "/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_tglLahirPas"
+            android:fontFamily="@font/mregular"
+            android:hint="DD MM YYYY"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Alamat "/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:id="@+id/edt_alamatPas"
+            android:hint="Alamat Sesuai KTP"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Telepon"/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:id="@+id/edit_teleponPas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:hint="HP atau Rumah"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Email "/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:id="@+id/edit_emailPas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Password "/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text=":"/>
+
+        <EditText
+            android:id="@+id/edit_passwordPas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edit_konfPasswordPas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Konfirmasi Password"
+            android:fontFamily="@font/mregular"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_savedata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mregular"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_rounded_facebook"
+        android:text="Simpan" />
+
+    <Button
+        android:id="@+id/btnkembali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_rounder_google"
+        android:text="Kembali" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

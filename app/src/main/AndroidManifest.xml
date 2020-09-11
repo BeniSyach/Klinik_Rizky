@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.klinikrizky">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_klinik"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_klinik"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".cetak_laporan"></activity>
+        <activity android:name=".Notifikasi_Firebase" />
+        <activity android:name=".informasi_adapter" />
+        <activity
+            android:name=".layout_poli"
+            android:parentActivityName=".layout_poli">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".Lupa_password"
+            android:parentActivityName=".Lupa_password">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+        </activity>
+        <activity
+            android:name=".List_antrian"
+            android:parentActivityName=".List_antrian">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".nomor_antrian2"
+            android:parentActivityName=".nomor_antrian2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".ActivityTambahInformasi"
+            android:parentActivityName=".ActivityTambahInformasi">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".DetailPoli"
+            android:parentActivityName=".DetailPoli">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".panggil_nomor"
+            android:parentActivityName=".panggil_nomor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".profile"
+            android:parentActivityName=".profile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".nomor_antrian"
+            android:parentActivityName=".nomor_antrian">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".activity_informasi"
+            android:parentActivityName=".activity_informasi">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".jadwal"
+            android:parentActivityName=".jadwal">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".LihatDataPasien"
+            android:parentActivityName=".LihatDataPasien">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".tambah_data_pasien"
+            android:parentActivityName=".tambah_data_pasien">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".tampil_akun"
+            android:parentActivityName=".tampil_akun">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".Nav_Home"
+            android:label="@string/title_activity_nav__home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".Nav_Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Nav_Home" />
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".screen"
+            android:theme="@style/screenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+</manifest>

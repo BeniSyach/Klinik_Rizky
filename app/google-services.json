@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "123862914693",
+    "firebase_url": "https://antrianklinik.firebaseio.com",
+    "project_id": "antrianklinik",
+    "storage_bucket": "antrianklinik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123862914693:android:ac233131a20f159e5c7bec",
+        "android_client_info": {
+          "package_name": "com.example.antrian_klinik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123862914693-9u7f0apo9j5iacghe6htrnvsfq04g29h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.antrian_klinik",
+            "certificate_hash": "4bb8addcf7ef2424cdc08403b17dc6b0c26c37ef"
+          }
+        },
+        {
+          "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLz_lAHmnU5dIUowCXLGEs6sw29DilFRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123862914693:android:415c6ab181deac5e5c7bec",
+        "android_client_info": {
+          "package_name": "com.example.klinikrizky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123862914693-7hdlikhb852fiuke0jd65fdmijm7uct8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.klinikrizky",
+            "certificate_hash": "4bb8addcf7ef2424cdc08403b17dc6b0c26c37ef"
+          }
+        },
+        {
+          "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLz_lAHmnU5dIUowCXLGEs6sw29DilFRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123862914693:android:255d65410822000a5c7bec",
+        "android_client_info": {
+          "package_name": "com.example.tugasakhirantrianpasien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123862914693-nivbqv078pejjqbu31ct4qmpbvpua784.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tugasakhirantrianpasien",
+            "certificate_hash": "4bb8addcf7ef2424cdc08403b17dc6b0c26c37ef"
+          }
+        },
+        {
+          "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLz_lAHmnU5dIUowCXLGEs6sw29DilFRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123862914693-lt3v9ni3p5hbq83r3ccqqm1c43mcaoap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

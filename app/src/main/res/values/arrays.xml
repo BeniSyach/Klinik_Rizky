@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="numbers">
+        <item>
+            Ruang Umum
+        </item>
+        <item>
+            Ruang Pemeriksaan Gigi
+        </item>
+        <item>
+            Ruang Imunisasi
+        </item>
+        <item>
+            Ruang Gizi
+        </item>
+        <item>
+            Ruang Sanitasi
+        </item>
+        <item>
+            Ruang Laktasi
+        </item>
+        <item>
+            Ruang Pemeriksaan
+        </item>
+        <item>
+            Ruang Kes. Usia Lanjut
+        </item>
+        <item>
+            Ruang KIA dan KB
+        </item>
+    </string-array>
+</resources>
