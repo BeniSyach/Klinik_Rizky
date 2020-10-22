@@ -1,27 +1,23 @@
 package com.example.klinikrizky;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-import android.print.PrintAttributes;
-import android.print.PrintDocumentAdapter;
-import android.print.PrintJob;
-import android.print.PrintManager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -33,8 +29,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+public class menu_laporan extends AppCompatActivity {
 
-public class List_antrian extends AppCompatActivity {
+    Button filter;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -42,23 +39,26 @@ public class List_antrian extends AppCompatActivity {
     private ArrayList<HashMap<String, Object>> myDataset = new ArrayList<>();
     private Map<String, Object> mydataset1 = new HashMap<>();
     private FirebaseFirestore lvfirestore;
-    private ImageView cetak;
-    private WebView webView;
+
+    EditText search_text;
+    Button search_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laporan__pasien);
-        webView=findViewById(R.id.webview);
+        setContentView(R.layout.activity_menu_laporan) ;
 
-        cetak=findViewById(R.id.cetak_laporan);
-        cetak.setOnClickListener(new View.OnClickListener() {
+        filter=findViewById(R.id.btfilter);
+        filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent datapasien = new Intent(List_antrian.this, cetak_laporan.class);
+                Intent datapasien = new Intent(menu_laporan.this, List_antrian.class);
                 startActivity(datapasien);
             }
         });
+
+        search_text = findViewById(R.id.search_field) ;
+        search_button =  findViewById(R.id.search_button) ;
 
         lvfirestore = FirebaseFirestore.getInstance();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
@@ -67,23 +67,47 @@ public class List_antrian extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        lvfirestore.collection("antri").orderBy("nomor", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+        search_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                ArrayList<Map<String, Object>> list = new ArrayList<>();
-                for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                    list.add(document.getData());
-                    Log.e("abc", document.getData().get("nama").toString());
+            public void onClick(View v) {
+                myDataset.clear();
+
+                String searchText = search_text.getText().toString();
+
+                Query searchQuery;
+
+                searchQuery = lvfirestore.collection("antri").orderBy("waktu").startAt(searchText).endAt(searchText+ "\uf8ff");
+                {
+                    if (searchQuery != null) {
+
+                        searchQuery.addSnapshotListener(new EventListener<QuerySnapshot>() {
+                            @Override
+                            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                                if (!queryDocumentSnapshots.isEmpty()) {
+                                    ArrayList<Map<String, Object>> list = new ArrayList<>();
+                                    for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                        list.add(document.getData());
+                                        Log.e("abc", document.getData().get("nama").toString());
+                                    }
+                                    mAdapter = new menu_laporan.MyAdapter(list);
+                                    recyclerView.setAdapter(mAdapter);
+                                }
+                                else{
+                                    Toast.makeText(menu_laporan.this, "data tidak ada.", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+
+                    }
                 }
-                mAdapter = new MyAdapter(list);
-                recyclerView.setAdapter(mAdapter);
             }
         });
 
 
     }
 
-    public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+    public class MyAdapter extends RecyclerView.Adapter<menu_laporan.MyAdapter.ViewHolder> {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             private TextView nik;
@@ -110,17 +134,17 @@ public class List_antrian extends AppCompatActivity {
         }
 
         @Override
-        public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public menu_laporan.MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             Context context = parent.getContext();
             LayoutInflater inflater = LayoutInflater.from(context);
 
             View contactView = inflater.inflate(R.layout.data_pasien, parent, false);
-            ViewHolder viewHolder = new ViewHolder(contactView);
+           menu_laporan.MyAdapter.ViewHolder viewHolder = new menu_laporan.MyAdapter.ViewHolder(contactView);
             return viewHolder;
         }
 
         @Override
-        public void onBindViewHolder(MyAdapter.ViewHolder viewHolder, int position) {
+        public void onBindViewHolder(menu_laporan.MyAdapter.ViewHolder viewHolder, int position) {
             TextView Nik = viewHolder.nik;
             TextView Nama = viewHolder.nama;
             TextView Nomor = viewHolder.nomor;
@@ -144,6 +168,3 @@ public class List_antrian extends AppCompatActivity {
     }
 
 }
-
-
-

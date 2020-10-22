@@ -138,7 +138,7 @@ public class Nav_Home extends AppCompatActivity
         notifikasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent panggilan = new Intent(Nav_Home.this, List_antrian.class);
+                Intent panggilan = new Intent(Nav_Home.this, menu_laporan.class);
                 startActivity(panggilan);
             }
         });
